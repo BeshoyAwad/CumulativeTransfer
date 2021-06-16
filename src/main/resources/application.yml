@@ -1,0 +1,33 @@
+IP: 192.168.254.89
+spring:
+  profiles:
+    active: "@activatedProperties@"
+  datasource:
+    hikari:
+      connectionTimeout: 300000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      maximumPoolSize: 100
+  eth:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://${IP}:3306/eth_v2?useCursorFetch=true&useSSL=false&sslMode=DISABLED&allowPublicKeyRetrieval=true&autoReconnect=true&allowLoadLocalInfile=true
+    password: g]y>@eMrsY9Hm)cg
+    username: beshoy
+  xrp:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://${IP}:3306/xrp?useCursorFetch=true&useSSL=false&sslMode=DISABLED&allowPublicKeyRetrieval=true&autoReconnect=true&allowLoadLocalInfile=true
+    password: g]y>@eMrsY9Hm)cg
+    username: beshoy
+  xlm:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://${IP}:3306/xlm?useCursorFetch=true&useSSL=false&sslMode=DISABLED&allowPublicKeyRetrieval=true&autoReconnect=true&allowLoadLocalInfile=true
+    password: g]y>@eMrsY9Hm)cg
+    username: beshoy
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          core:
+            JdbcTemplate: debug
+
